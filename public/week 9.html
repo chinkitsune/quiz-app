@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java File I/O — Practice Exam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- DATA FILE — swap questions.js for a different quiz topic -->
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="questions_week9.js" defer></script>
+  <script src="quiz-engine.js" defer></script>
+
+
+</head>
+<body>
+
+  <!-- ── Sticky Header ── -->
+  <div class="sticky-header">
+    <div class="header-inner">
+      <span class="header-title" id="header-title">Java File I/O</span>
+      <div class="progress-wrap">
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <span class="progress-text" id="progress-text">0 / 0</span>
+      </div>
+      <div class="score-badge">
+        <div class="dot"></div>
+        <span id="score-live">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-wrapper">
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="hero-eyebrow">📂 Practice Exam</div>
+      <h1 id="hero-title">Java <span>File I/O</span></h1>
+      <p id="hero-desc">Loading questions…</p>
+      <div class="hero-stats" id="hero-stats"></div>
+    </section>
+
+    <!-- ── Filter Bar ── -->
+    <div class="filter-bar" id="filter-bar"></div>
+
+    <!-- ── Questions Grid ── -->
+    <div class="questions-grid" id="questions-grid"></div>
+
+    <!-- ── Summary Screen ── -->
+    <div id="summary-screen">
+      <div class="summary-card">
+        <span class="summary-emoji" id="summary-emoji">🎓</span>
+        <h2 class="summary-title">Quiz Complete!</h2>
+        <p class="summary-subtitle" id="summary-sub">Here's how you did.</p>
+
+        <div class="score-ring-wrap">
+          <svg class="score-ring" viewBox="0 0 120 120">
+            <circle class="score-ring-bg" cx="60" cy="60" r="54"/>
+            <circle class="score-ring-fill" id="ring-fill" cx="60" cy="60" r="54"/>
+          </svg>
+          <div class="score-ring-text">
+            <span class="score-pct" id="score-pct">–</span>
+            <span class="score-label">Score</span>
+          </div>
+        </div>
+
+        <div class="summary-stats">
+          <div class="stat-box">
+            <span class="num" id="stat-total">–</span>
+            <span class="lbl">Total</span>
+          </div>
+          <div class="stat-box green">
+            <span class="num" id="stat-correct">–</span>
+            <span class="lbl">Correct</span>
+          </div>
+          <div class="stat-box red">
+            <span class="num" id="stat-wrong">–</span>
+            <span class="lbl">Wrong</span>
+          </div>
+        </div>
+
+        <div class="grade-badge" id="grade-badge">–</div>
+
+        <br/>
+        <button class="btn-retry" onclick="resetQuiz()">↺ &nbsp;Try Again</button>
+      </div>
+    </div>
+
+  </div><!-- /.app-wrapper -->
+
+
+</body>
+</html>
