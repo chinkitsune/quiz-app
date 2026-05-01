@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  section.hero
+        .hero-inner
+          .hero-eyebrow ✦ &nbsp;Practice Exams
+          h1.hero-title
+            | Study smarter,
+            br
+            span.hero-accent not harder.
+          p.hero-subtitle
+            | Scenario-based multiple-choice quizzes that test true understanding —
+            | not memorisation. Pick a subject and start practising.
+          .hero-stats
+            .hero-stat
+              span.stat-num 5
+              span.stat-label Subjects
+            .hero-divider
+            .hero-stat
+              span.stat-num 250+
+              span.stat-label Questions
+            .hero-divider
+            .hero-stat
+              span.stat-num Weekly
+              span.stat-label Updates
+  
+
+  section#java.subject-section
+  .section-header
+    .section-header-left
+      span.section-badge
+        span.badge-dot(style='background:#2d5a3d')
+        | Java
+      h2.section-title Object-Oriented Programming
+      p.section-desc CST8284 · Weekly practice exams covering OOP concepts in Java
+    a.section-see-all(href='#java') All Java quizzes →
+
+  section#web.subject-section
+    .section-header
+      .section-header-left
+        span.section-badge
+          span.badge-dot(style='background:#1a5fa8')
+          | Web
+        h2.section-title Web Programming
+        p.section-desc HTML, CSS, JavaScript, and modern front-end frameworks
+      a.section-see-all(href='#web') All Web quizzes →
+
+  section#linux.subject-section
+    .section-header
+      .section-header-left
+        span.section-badge
+          span.badge-dot(style='background:#b45309')
+          | Linux
+        h2.section-title Linux & Shell
+        p.section-desc Command line, scripting, permissions, and system administration
+      a.section-see-all(href='#linux') All Linux quizzes →
+
+  section#database.subject-section
+    .section-header
+      .section-header-left
+        span.section-badge
+          span.badge-dot(style='background:#7c3aed')
+          | Database
+        h2.section-title Database & SQL
+        p.section-desc Relational design, SQL queries, normalization, and transactions
+      a.section-see-all(href='#database') All Database quizzes →

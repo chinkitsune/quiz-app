@@ -1,19 +1,27 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));  
-app.set("view engine","pug"); 
 
 
-// Set up a route for the homepage (GET request)
-app.get('/', (req, res) => {
-  res.send('<h1>Welcome to My Web App!</h1>');  // Sends a simple HTML response
+app.set('views', './views');
+app.set('view engine', 'pug'); 
+
+const homeRoutes = require('./routes/home');
+
+// Mount Routes
+// All requests starting with '/' go to homeRoutes
+app.use('/', homeRoutes); 
+
+app.use((req, res) => {
+  res.status(404).render('error', { message: 'Page not found' });
 });
 
 // Make the server listen on port 3000
