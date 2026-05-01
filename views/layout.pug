@@ -1,3 +1,4 @@
+// views/layout.pug
 doctype html
 html(lang='en')
   head
@@ -8,11 +9,12 @@ html(lang='en')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
     link(href='https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/css/styles.css')
+    script(src="/js/home.js" defer type='module')
     block styles
-      link(rel='stylesheet' href='/css/styles.css')
 
     block scripts
-      script(src="/js/home.js" defer type='module')
+      
   body
     #app.container
       include includes/header.pug
