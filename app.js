@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'pug'); 
 
-const homeRoutes = require('./routes/home');
+const homeRoutes = require('./routes/homeRouter');
 
 // Mount Routes
 // All requests starting with '/' go to homeRoutes
