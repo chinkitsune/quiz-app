@@ -36,7 +36,7 @@ block content
         .subject-card(data-subject-id=subject.id data-subject-name=subject.name)
           .subject-card-header
             span.subject-badge
-              span.badge-dot(style=`background:${subject.color}`)
+              span.badge-dot(class=`badge-dot--${subject.id}`)
               | #{subject.name}
           h2.subject-card-title #{subject.title}
           p.subject-card-desc #{subject.description}

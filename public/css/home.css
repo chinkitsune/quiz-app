@@ -128,16 +128,33 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  background: var(--java-color); /* Fallback */
 }
+
+
+.badge-dot--java { background: var(--java-color); }
+.badge-dot--web { background: var(--web-color); }
+.badge-dot--linux { background: var(--linux-color); }
+.badge-dot--database { background: var(--database-color); }
 
 .subject-card-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0 0.75rem 0;
   color: var(--text-primary);
+
+  /* --- ADD THESE LINES --- */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limits to 1 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." if text is too long */
+  /* ---------------------- */
 }
 
 .subject-card-desc {
+  min-height: 4.5rem; 
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.5;
