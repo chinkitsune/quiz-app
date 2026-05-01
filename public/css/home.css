@@ -1,3 +1,4 @@
+/*  public/css/home.css*/
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
@@ -70,11 +71,11 @@
 
 
 
+
 /* Subjects Section Container */
 .subjects-section {
   padding: 3rem 1rem;
   background: var(--bg);
-
 }
 
 .subjects-container {
@@ -87,19 +88,24 @@
 
 /* Subject Card Styling */
 .subject-card {
-  background: var(--surface);
+  background-color: var(--surface);
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid var(--border);
+  border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  
+  /* ── NEW: Flexbox layout ── */
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Makes all cards equal height */
 }
 
 .subject-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-  border-color: var(--border);
+  border-color: #d1d5db;
 }
 
 .subject-card-header {
@@ -136,17 +142,22 @@
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 1.5rem;
+  
+  /* ── NEW: Grow to fill space ── */
+  flex-grow: 1;
 }
 
 .subject-card-cta {
   display: inline-block;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #3b82f6;
+  color: var(--accent);
   transition: gap 0.2s ease;
+  
+  /* ── NEW: Push to bottom ── */
+  margin-top: auto;
 }
 
 .subject-card:hover .subject-card-cta {
-  color: #1d4ed8;
+  color: var(--accent-hover);
 }
-
