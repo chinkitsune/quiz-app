@@ -1,9 +1,12 @@
+// app.js
 const express = require('express');
 const path = require('path');
 
+const homeRoutes = require('./routes/homeRouter');
 const app = express();
 
 const port = process.env.PORT || 3000;
+
 
 
 app.use(express.json());
@@ -14,7 +17,6 @@ app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'pug'); 
 
-const homeRoutes = require('./routes/homeRouter');
 
 // Mount Routes
 // All requests starting with '/' go to homeRoutes
