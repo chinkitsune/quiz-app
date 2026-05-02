@@ -1,4 +1,4 @@
-// routes/subjectRouter.js
+// routes/subjectsRouter.js
 const express = require('express');
 const router = express.Router();
 const { subjects, quizzes } = require('../data/subjectsData');
@@ -13,7 +13,7 @@ router.get('/:id', (req, res) => {
         return res.status(404).render('error', { message: 'Subject not found' });
     }
 
-    res.send(`<h1>${subject.name}</h1><p>${subject.description}</p>`);
+    res.render('subjects', { subject }); 
 });
 
 

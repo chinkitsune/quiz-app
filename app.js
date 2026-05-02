@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 const homeRoutes = require('./routes/homeRouter');
-const subjectRoutes = require('./routes/subjectRouter');
+const subjectsRoutes = require('./routes/subjectsRouter');
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 // Mount Routes
 // All requests starting with '/' go to homeRoutes
 app.use('/', homeRoutes); 
-app.use('/subjects', subjectRoutes);
+app.use('/subjects', subjectsRoutes);
 
 app.use((req, res) => {
   res.status(404).render('error', { message: 'Page not found' });
