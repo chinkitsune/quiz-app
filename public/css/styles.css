@@ -39,7 +39,10 @@
 }
 
 /* ── Reset ──────────────────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
@@ -49,10 +52,19 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-a { text-decoration: none; color: inherit; }
+a { 
+  text-decoration: none; 
+  color: inherit; 
+}
 ul { list-style: none; }
-img { display: block; max-width: 100%; }
-button { cursor: pointer; font-family: var(--font-body); }
+img { 
+  display: block; 
+  max-width: 100%; 
+}
+button { 
+  cursor: pointer; 
+  font-family: var(--font-body); 
+}
 
 
 body {
