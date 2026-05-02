@@ -6,6 +6,7 @@ const path = require('path');
 
 const mongoose = require('mongoose');
 const User = require('./models/User');
+const subject = require('./models/subject');
 
 const homeRoutes = require('./routes/homeRouter');
 const subjectsRoutes = require('./routes/subjectsRouter');

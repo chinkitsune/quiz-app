@@ -1,20 +1,20 @@
 // routes/subjectsRouter.js
 const express = require('express');
 const router = express.Router();
-const { subjects, quizzes } = require('../data/subjectsData');
+const subjectDB = require('../models/subject');
 
-router.get('/:id', (req, res) => {
-    const subjectId = req.params.id;
+router.get('/:name', async (req, res) => {
+  try {
+    const subject = await subjectDB.findOne({ name: req.params.name });
 
-    const subject = subjects.find(s => s.id === subjectId);
-
-      // If subject doesn't exist, redirect or show 404
     if (!subject) {
-        return res.status(404).render('error', { message: 'Subject not found' });
+      return res.status(404).render('error', { message: 'Subject not found' });
     }
 
-    res.render('subjects', { subject }); 
+    res.render('subjects', { subject });
+  } catch (err) {
+    res.status(500).render('error', { message: 'Failed to load subject' });
+  }
 });
-
 
 module.exports = router;

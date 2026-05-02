@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   subjectCards.forEach(card => {
     card.addEventListener('click', () => {
-      const subjectId = card.getAttribute('data-subject-id');
-      window.location.href = `/subjects/${subjectId}`;
+      const subjectName = card.getAttribute('data-subject-name');
+      window.location.href = `/subjects/${subjectName}`;
     });
   });
 });
