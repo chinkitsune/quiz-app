@@ -35,10 +35,6 @@ app.use((req, res) => {
   res.status(404).render('error', { message: 'Page not found' });
 });
 
-// // Make the server listen on port 3000
-// app.listen(port, () => {
-//   console.log('Server running on http://localhost:3000');
-// });
 
 // using mongoose to connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
