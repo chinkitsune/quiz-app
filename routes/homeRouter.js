@@ -8,7 +8,7 @@ const subjects = [
   {
     id: 'java',
     name: 'Java',
-    title: 'Object-Oriented Programming',
+    title: 'OOP in Java',
     description: 'CST8284 · Weekly practice exams covering OOP concepts in Java'
   },
   {
