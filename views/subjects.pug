@@ -1,6 +1,15 @@
+//- views/subjects.pug
 extends layout 
 
+block styles
+  link(rel='stylesheet' href='/css/subjects.css')
+
+
 block content
-  .subjects-container
-    .icon #{subject.icon}
-    h1 #{subject.name}
+  section.subject-hero
+    .subject-hero-inner
+      .subject-icon= subject.icon
+      h1.subject-title= subject.title
+      p.subject-lead= subject.fullDescription
+
+

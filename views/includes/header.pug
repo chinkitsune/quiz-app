@@ -1,3 +1,4 @@
+//- views/includes/header.pug
 header.navbar
     nav.nav-inner
         //- Logo
@@ -9,10 +10,10 @@ header.navbar
         //- Desktop nav links
         ul.nav-links
             li: a.nav-link.active(href='/') Home
-            li: a.nav-link(href='#java') Java
-            li: a.nav-link(href='#web') Web
-            li: a.nav-link(href='#linux') Linux
-            li: a.nav-link(href='#database') Database
+            li: a.nav-link(href='/subjects/java') Java
+            li: a.nav-link(href='/subjects/web') Web
+            li: a.nav-link(href='/subjects/linux') Linux
+            li: a.nav-link(href='/subjects/database') Database
 
         //- Right-side controls
         .nav-actions
@@ -29,9 +30,9 @@ header.navbar
     .mobile-drawer(id='mobile-drawer' aria-hidden='true')
         ul.mobile-nav-links
             li: a.mobile-nav-link(href='/') Home
-            li: a.mobile-nav-link(href='#java') Java
-            li: a.mobile-nav-link(href='#web') Web Programming
-            li: a.mobile-nav-link(href='#linux') Linux
-            li: a.mobile-nav-link(href='#database') Database
+            li: a.mobile-nav-link(href='/subjects/java') Java
+            li: a.mobile-nav-link(href='/subjects/web') Web Programming
+            li: a.mobile-nav-link(href='/subjects/linux') Linux
+            li: a.mobile-nav-link(href='/subjects/database') Database
 
 
