@@ -11,5 +11,14 @@ block content
       .subject-icon= subject.icon
       h1.subject-title= subject.title
       p.subject-lead= subject.fullDescription
+  
+  section.quiz-list
+    h2 Available Quizzes
+    .quiz-cards
+      each quiz in quizzes
+        .quiz-card
+          h3= quiz.title
+          p= quiz.description
+          a.btn(href=`/quizzes/${quiz._id}`) Start Quiz
 
 

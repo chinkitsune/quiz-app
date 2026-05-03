@@ -1,4 +1,4 @@
-// models/Subject.js
+// models/subject.js
 const mongoose = require('mongoose');
 
 const subjectSchema = new mongoose.Schema({
@@ -29,4 +29,4 @@ const subjectSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Subject', subjectSchema);
+module.exports = mongoose.model('subject', subjectSchema);

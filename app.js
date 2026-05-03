@@ -5,11 +5,13 @@ const express = require('express');
 const path = require('path');
 
 const mongoose = require('mongoose');
-const User = require('./models/User');
+const user = require('./models/user');
 const subject = require('./models/subject');
+
 
 const homeRoutes = require('./routes/homeRouter');
 const subjectsRoutes = require('./routes/subjectsRouter');
+const quizRouter = require('./routes/quizRouter');
 const userRoutes = require('./routes/userRouter');
 
 const app = express();
@@ -32,6 +34,9 @@ app.set('view engine', 'pug');
 app.use('/', homeRoutes); 
 app.use('/subjects', subjectsRoutes);
 app.use('/users', userRoutes);
+app.use('/quizzes', quizRouter);
+
+// 404 handler for unmatched routes
 app.use((req, res) => {
   res.status(404).render('error', { message: 'Page not found' });
 });
