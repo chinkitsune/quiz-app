@@ -5,11 +5,15 @@
   padding: 72px 0 56px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
+  align-items: flex-start;
   gap: 60px;
 }
+
+
 .hero-inner { 
-  max-width: 680px; 
+  flex: 1;
+  min-width: 300px;
+  max-width: 680px;
 }
 
 .hero-eyebrow {
@@ -41,7 +45,6 @@
 .hero-subtitle {
   font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 520px;
   margin-bottom: 36px;
   line-height: 1.7;
 }
@@ -76,12 +79,21 @@
 }
 
 
-.hero-banner{
-  max-width: 400px;
-  padding: 30px, 0;
-  text-align: center ;
+.hero-banner {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
 
 
 /* Subjects Section Container */
@@ -189,4 +201,24 @@
 
 .subject-card:hover .subject-card-cta {
   color: var(--accent-hover);
+}
+
+
+
+/* On smaller screens: stack vertically, subtitle expands */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .hero-inner,
+  .hero-banner {
+    max-width: 100%;
+    min-width: unset;
+  }
+  
+  .hero-subtitle {
+    max-width: 100%;
+  }
 }
