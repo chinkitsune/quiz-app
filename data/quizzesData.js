@@ -29,6 +29,60 @@ module.exports = [
     title: "Java File I/O",
     description: "Java streams, NIO classes, sequential files, and file-based I/O.",
   },
+    {
+    subjectName: 'database',
+    title: "Oracle & PL/SQL",
+    description:
+      "Oracle database architecture, SQL vs PL/SQL, blocks, variables, control structures, stored procedures, and functions.",
+  },
+  {
+    subjectName: 'database',
+    title: "PL/SQL Cursors & Exception Handling",
+    description:
+      "implicit and explicit cursors, cursor lifecycle, fetching data, predefined and user-defined exceptions, and error handling techniques.",
+  },
+  {
+    subjectName: 'database',
+    title: "Triggers & PL/SQL Packages",
+    description:
+      "row-level and statement-level triggers, BEFORE and AFTER triggers, package specification and body, encapsulation, and modular programming in PL/SQL.",
+  },
+  {
+    subjectName: 'database',
+    title: "Data Warehousing, NoSQL & MongoDB",
+    description:
+      "data warehouse concepts, ETL processes, OLAP vs OLTP, NoSQL database types, MongoDB collections and documents, and aggregation framework basics.",
+  },
+  {
+    subjectName: 'web',
+    title: "JavaScript Async Programming Mastery",
+    description:
+      "callbacks, promises, async/await, event loop, handling asynchronous operations, error handling, and concurrency patterns in JavaScript.",
+  },
+  {
+    subjectName: 'web',
+    title: "Node.js",
+    description:
+      "Node.js runtime, modules, file system, event-driven architecture, npm, building servers, and working with asynchronous I/O.",
+  },
+  {
+    subjectName: 'web',
+    title: "Express.js",
+    description:
+      "Express framework basics, routing, middleware, request and response handling, REST APIs, and application structure.",
+  },
+  {
+    subjectName: 'web',
+    title: "Express.js + MongoDB with Mongoose",
+    description:
+      "connecting Express apps to MongoDB, Mongoose schemas and models, CRUD operations, validation, and structuring full-stack applications.",
+  },
+  {
+    subjectName: 'web',
+    title: "User Authentication in Express.js",
+    description:
+      "authentication concepts, sessions vs tokens, JWT, password hashing, login and registration flows, and securing Express applications.",
+  },
   {
     subjectName: 'javascript',  // Reference by name, not _id yet
     title: 'JavaScript Fundamentals',
@@ -50,4 +104,4 @@ module.exports = [
     tagA: 'Basics',
     tagB: 'Syntax'
   }
-];
+]; 
