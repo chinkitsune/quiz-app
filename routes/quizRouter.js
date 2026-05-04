@@ -5,16 +5,16 @@ const quizDB = require('../models/quiz');
 const questionDB = require('../models/question');
 
 // Get a specific quiz with all questions
-router.get('/:quizId', async (req, res) => {
+router.get('/:slug', async (req, res) => {
   try {
-    const quiz = await quizDB.findById(req.params.quizId)
+    const quiz = await quizDB.findOne({ slug: req.params.slug })
       .populate('subject');
 
     if (!quiz) {
       return res.status(404).render('error', { message: 'Quiz not found' });
     }
 
-    const questions = await questionDB.find({ quiz: req.params.quizId });
+    const questions = await questionDB.find({ quiz: quiz._id });
 
     res.render('quiz', { quiz, questions });
   } catch (err) {
