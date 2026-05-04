@@ -16,16 +16,10 @@ const questionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  options: [{
-    text: {
-      type: String,
+  options: {
+      type: [String],
       required: true
-    },
-    isCorrect: {
-      type: Boolean,
-      default: false
-    }
-  }],
+  },
   correctOption: {
     type: Number,
     required: true
