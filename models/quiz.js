@@ -29,11 +29,6 @@ const quizSchema = new mongoose.Schema({
   tagB: {
     type: String
   },
-  difficulty: {
-    type: String,
-    enum: ['easy', 'medium', 'hard'],
-    default: 'medium'
-  },
   questionCount: {
     type: Number,
     default: 0

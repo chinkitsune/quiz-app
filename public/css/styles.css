@@ -17,6 +17,12 @@
   --accent-light:  #e8f2eb;
   --accent-hover:  #234a32;
   --tag-bg:        #ede9e1;
+  --hard-light:     #fcd9d6;
+  --medium-light:   #f3efe7;
+  --easy-light:     #b3e5c2;
+  --hard:           #8d332d;
+  --medium:         #f59e0b;
+  --easy:           #4d7b5c;
   --shadow-sm:     0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
   --shadow-md:     0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
   --shadow-lg:     0 20px 48px rgba(0,0,0,.10), 0 8px 16px rgba(0,0,0,.06);
