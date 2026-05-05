@@ -1,29 +1,47 @@
-//- views/quiz.pug
-extends layout 
+extends layout
 
 block styles
   link(rel='stylesheet' href='/css/quiz.css')
 
-block content 
-    h2 this is a quiz page 
+block scripts
+  script(type='module' src="/js/quiz-engine.js" defer)
 
-    section quiz-hero
-        .quiz-hero-inner
-            h1.quiz-title= quiz.title
-            p.quiz-description= quiz.description
+block content
+  // Embed quiz data as a script, NOT mixed with HTML
+  script(type='application/json' id='quiz-data')
+    != quizDataJson
 
-    section quiz-content
-        .question-list
-            .quiz-questions-card
-                each question,index in questions
-                    .quiz-question
-                        h3.question-title= `Question ${index + 1}`
-                        p.question-text= question.question
-                        .question-options-list
-                            .question-options-item
-                                each option,optIndex  in question.options
-                                    label.question-option
-                                        input(type='radio' name=`question-${question._id}` value=optIndex)
-                                        span= option
-                        .question-explanation(style='display:none')
-                            p= question.explanation
+  // Pure HTML structure — NO JavaScript logic here
+  div#quiz-container
+    header.sticky-header
+      .header-inner
+        h1.header-title= quiz.title
+        .progress-ring-wrapper
+          svg.progress-ring(width='60' height='60')
+            circle(cx='30' cy='30' r='27')
+            circle#ring-fill(cx='30' cy='30' r='27')
+          #progress-text
+      
+      #filter-bar.filter-buttons
+        // Buttons will be built by JavaScript
+    
+    main#questions-grid.questions-grid
+      // Questions will be rendered by JavaScript
+
+    #summary-screen.summary-section
+      .summary-inner
+        h2 Quiz Complete! 🎉
+        div#summary-emoji.emoji-display
+        div#grade-badge.grade-badge
+        div#summary-sub.summary-message
+        .stats-row
+          .stat-block
+            .stat-label Total Questions
+            .stat-value#stat-total
+          .stat-block
+            .stat-label Correct
+            .stat-value#stat-correct
+          .stat-block
+            .stat-label Wrong
+            .stat-value#stat-wrong
+        button.btn.btn-primary(onclick='window.resetQuiz()') Try Again

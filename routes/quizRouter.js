@@ -15,7 +15,11 @@ router.get('/:slug', async (req, res) => {
 
     const questions = await questionDB.find({ quiz: quiz._id });
 
-    res.render('quiz', { quiz, questions });
+    res.render('quiz', { 
+      quiz, 
+      questions,
+      quizDataJson: JSON.stringify({ quiz, questions })
+    });
   } catch (err) {
     res.status(500).render('error', { message: 'Failed to load quiz' });
   }
