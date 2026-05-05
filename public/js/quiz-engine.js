@@ -79,8 +79,7 @@ class QuizEngine {
     const stats = this.state.getStats();
     const pct = this.questions.length ? (stats.answered / this.questions.length) * 100 : 0;
 
-    document.getElementById('ring-fill').style.strokeDashoffset = 
-      (339.29 * (1 - pct / 100)).toFixed(2);
+    document.getElementById('ring-fill').style.width = pct + '%';
     document.getElementById('progress-text').textContent = 
       `${stats.answered} / ${this.questions.length}`;
 
