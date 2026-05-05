@@ -1,0 +1,29 @@
+//- views/quiz.pug
+extends layout 
+
+block styles
+  link(rel='stylesheet' href='/css/quiz.css')
+
+block content 
+    h2 this is a quiz page 
+
+    section quiz-hero
+        .quiz-hero-inner
+            h1.quiz-title= quiz.title
+            p.quiz-description= quiz.description
+
+    section quiz-content
+        .question-list
+            .quiz-questions-card
+                each question,index in questions
+                    .quiz-question
+                        h3.question-title= `Question ${index + 1}`
+                        p.question-text= question.question
+                        .question-options-list
+                            .question-options-item
+                                each option,optIndex  in question.options
+                                    label.question-option
+                                        input(type='radio' name=`question-${question._id}` value=optIndex)
+                                        span= option
+                        .question-explanation(style='display:none')
+                            p= question.explanation

@@ -1,0 +1,117 @@
+.question-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.quiz-questions-card{
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  animation: fadeSlideIn 0.4s ease both;
+}
+
+
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-questions-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+
+
+.question-text {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+
+.question-text pre {
+  background: #1a1714;
+  color: #e8e0d5;
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin: 12px 0 0;
+  overflow-x: auto;
+  border: 1px solid #2d2620;
+}
+
+.question-text pre code {
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.question-text code {
+  font-family: var(--font-code);
+  font-size: 0.83em;
+  background: var(--tag-bg);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.question-options-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+
+.question-options-item{
+  display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+      background: var(--surface-2);
+}
+
+
+.question-options-item:hover:not(.disabled) {
+  border-color: var(--border-focus);
+  background: var(--option-hover);
+  transform: translateX(2px);
+}
+
+.question-options-item.disabled {
+  cursor: default;
+}
+
+
+
+
+
+.question-explanation {
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #f9f7f3, #f3f0ea);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      display: none;
+      animation: expandIn 0.3s ease;
+    }

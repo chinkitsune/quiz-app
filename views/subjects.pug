@@ -14,18 +14,19 @@ block content
   
   section.quiz-list
     h2 Available Quizzes
-    .quiz-list-container
-      each quiz in quizzes
-        a.quiz-list-item(href=`/quizzes/${quiz.slug}`)
-          .quiz-list-main
-            h3.quiz-list-title= quiz.title
-            p.quiz-list-description= quiz.description
-          .quiz-list-meta
-            if quiz.tagA
-              .quiz-tag= quiz.tagA
-            if quiz.tagB
-              .quiz-tag= quiz.tagB
-            .quiz-difficulty(class=`difficulty-${quiz.difficulty}`)= quiz.difficulty
-          .quiz-arrow →
+      .quiz-list-container
+        .quiz-list-card
+          each quiz in quizzes
+            a.quiz-list-item(href=`/quizzes/${quiz.slug}`)
+              .quiz-list-main
+                h3.quiz-list-title= quiz.title
+                p.quiz-list-description= quiz.description
+              .quiz-list-meta
+                if quiz.tagA
+                  .quiz-tag= quiz.tagA
+                if quiz.tagB
+                  .quiz-tag= quiz.tagB
+                .quiz-difficulty(class=`difficulty-${quiz.difficulty}`)= quiz.difficulty
+              .quiz-arrow →
 
 
