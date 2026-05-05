@@ -14,16 +14,17 @@ block content
   // Pure HTML structure — NO JavaScript logic here
   div#quiz-container
     header.sticky-header
+      #filter-bar.filter-buttons
+        // Buttons will be built by JavaScript
+        
       .header-inner
         h1.header-title= quiz.title
         .progress-ring-wrapper
-          svg.progress-ring(width='60' height='60')
-            circle(cx='30' cy='30' r='27')
-            circle#ring-fill(cx='30' cy='30' r='27')
+          .progress-bar-track
+            .progress-bar-fill#ring-fill
           #progress-text
       
-      #filter-bar.filter-buttons
-        // Buttons will be built by JavaScript
+      
     
     main#questions-grid.questions-grid
       // Questions will be rendered by JavaScript

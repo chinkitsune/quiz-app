@@ -1,8 +1,5 @@
-
-
 /* ── 3. Layout ───────────────────────────────────────────────────────────── */
 #quiz-container {
-
   margin: 0auto;
   padding: 0 20px 80px;
 }
@@ -18,11 +15,12 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 14px 20px;
+  text-align: center ;
 }
 
 .header-inner {
   max-width: 860px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +59,7 @@
   transition: width 0.5s cubic-bezier(.4, 0, .2, 1);
 }
 
-.progress-text {
+#progress-text {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-secondary);
@@ -153,6 +151,7 @@
 /* ── 6. Filter Bar ───────────────────────────────────────────────────────── */
 .filter-bar {
   display: flex;
+  text-align: center;
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 32px;
