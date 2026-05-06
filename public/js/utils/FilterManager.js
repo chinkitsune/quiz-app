@@ -1,3 +1,7 @@
+//public/js/utils/FilterManager.js
+
+//
+
 const FILTERS = [
   { id: 'all', label: '✦ All Questions' },
   { id: 'unanswered', label: '⏳ Unanswered' },

@@ -1,3 +1,7 @@
+//public/js/utils/DOMBuilder.js
+
+//Create HTML for questions
+
 const LETTERS = ['A', 'B', 'C', 'D'];
 
 class DOMBuilder {
@@ -22,10 +26,10 @@ class DOMBuilder {
         <span class="q-number">Q${qNum}</span>
         ${statusIcon}
       </div>
-      <div class="question-text">${this.escapeHtml(question.question)}</div>
+      <div class="question-text">${question.question}</div>
       <ul class="options-list" id="opts-${question._id}" role="list"></ul>
       <div class="explanation${answerState ? ' visible' : ''}" id="exp-${question._id}">
-        💡 <strong>Explanation:</strong> ${this.escapeHtml(question.explanation)}
+        💡 <strong>Explanation:</strong> ${question.explanation}
       </div>
     `;
 
@@ -64,7 +68,7 @@ class DOMBuilder {
 
     li.innerHTML = `
       <span class="option-letter" aria-hidden="true">${LETTERS[optionIndex]}</span>
-      <span class="option-text">${this.escapeHtml(question.options[optionIndex])}</span>
+      <span class="option-text">${question.options[optionIndex]}</span>
       <span class="option-indicator" aria-hidden="true">${icon}</span>
     `;
 
@@ -78,11 +82,6 @@ class DOMBuilder {
     </div>`;
   }
 
-  static escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
 }
 
 export default DOMBuilder;

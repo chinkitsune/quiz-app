@@ -1,3 +1,7 @@
+// public/js/models/QuizState.js
+
+// Remember what the user did
+
 class QuizState {
   constructor() {
     this.answered = {};
