@@ -1,3 +1,5 @@
+//public/js/api/QuizAPI.js
+
 class QuizAPI {
   static async fetchQuiz(quizId) {
     try {
