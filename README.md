@@ -155,10 +155,9 @@ All configuration is managed through environment variables in the `.env` file:
 5. **Track Progress** - Monitor your quiz history and improvements
 
 ## 📊 Screenshots
-
-*Add screenshots of your application here (optional but recommended)*
 ![Screenshot](./public/img/2-examples-home.png)
-
+![Screenshot](./public/img/2-examples-subject.png)
+![Screenshot](./public/img/2-examples-quiz.png)
 ## 🧪 Testing
 
 To run tests (if implemented):
