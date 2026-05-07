@@ -160,24 +160,6 @@ All configuration is managed through environment variables in the `.env` file:
 ![Screenshot](./public/img/2-examples-quiz.png)
 ## 🧪 Testing
 
-To run tests (if implemented):
-```bash
-npm test
-```
-
-## 🐛 Known Issues & Future Improvements
-
-### Planned Features
-- [ ] Quiz timer functionality
-- [ ] Leaderboard and ranking system
-- [ ] Admin dashboard for quiz creation
-- [ ] Email notifications for quiz reminders
-- [ ] Search and filter quizzes
-- [ ] Export quiz results as PDF
-- [ ] Dark mode support
-
-### Known Issues
-*Document any known bugs or limitations here*
 
 ## 👤 Author
 
@@ -197,13 +179,6 @@ Contributions are welcome! To contribute:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📞 Support
-
-If you have any questions or issues, please:
-- Open an [issue](https://github.com/chinkitsune/quiz-app/issues) on GitHub
-- Check existing issues for solutions
-- Contact the author
 
 ## 🙏 Acknowledgments
 
