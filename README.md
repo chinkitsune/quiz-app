@@ -157,6 +157,7 @@ All configuration is managed through environment variables in the `.env` file:
 ## 📊 Screenshots
 
 *Add screenshots of your application here (optional but recommended)*
+![Screenshot](./public/img/2-examples-home.png)
 
 ## 🧪 Testing
 
