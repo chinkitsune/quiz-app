@@ -66,24 +66,11 @@ quiz-app/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/chinkitsune/quiz-app.git
+   git clone https://github.com/jiaying-chen-teyura/Quiz-Web-Application.git
    cd quiz-app
    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   Create a `.env` file in the root directory:
-   ```
-   MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database>
-   PORT=3000
-   NODE_ENV=development
-   ```
-
-4. **Start the application**
+2.  **Start the application**
    ```bash
    npm start
    ```
