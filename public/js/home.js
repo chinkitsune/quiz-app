@@ -8,4 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `/subjects/${subjectName}`;
     });
   });
+
+
 });
+

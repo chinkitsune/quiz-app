@@ -29,6 +29,31 @@ app.set('views', './views');
 app.set('view engine', 'pug'); 
 
 
+// ARCHITECTURAL ADDITION: Global Navigation Middleware
+app.use(async (req, res, next) => {
+  try {
+    // Fetch all subjects from MongoDB, sorted by title
+    const allSubjects = await subject.find().sort({ title: 1 });
+
+    // Group subjects by their level: { '2': [...], '3': [...] }
+    const categorizedLevels = {};
+    allSubjects.forEach(sub => {
+      if (!categorizedLevels[sub.level]) {
+        categorizedLevels[sub.level] = [];
+      }
+      categorizedLevels[sub.level].push(sub);
+    });
+
+    // res.locals makes 'navLevels' automatically visible to all Pug templates
+    res.locals.navLevels = categorizedLevels;
+    next();
+  } catch (err) {
+    console.error('Failed to load navbar categories:', err.message);
+    res.locals.navLevels = {}; // Fallback so the app doesn't crash
+    next();
+  }
+});
+
 // Mount Routes
 // All requests starting with '/' go to homeRoutes
 app.use('/', homeRoutes); 

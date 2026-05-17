@@ -11,6 +11,11 @@ const subjectSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  level: {
+    type: Number,
+    enum: [1,2, 3,4], // Supports level 1, 2, 3 and level 4
+    required: true
+  },
   description: {
     type: String,
     required: true
