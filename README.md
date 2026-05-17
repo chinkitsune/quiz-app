@@ -151,7 +151,7 @@ All configuration is managed through environment variables in the `.env` file:
 ## 👤 Author
 
 **chinkitsune**
-- GitHub: [@chinkitsune](https://github.com/chinkitsune)
+- GitHub: [@jiaying-chen-teyura](https://github.com/jiaying-chen-teyura)
 
 ## 📄 License
 
