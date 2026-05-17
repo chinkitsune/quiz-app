@@ -18,7 +18,7 @@ module.exports = [
   },
   {
     name: 'linux',
-    title: 'Operating Systems',
+    title: 'Linux Systems',
     level:2,
     description: 'CST8288 · Linux commands, shell scripting, and system administration',
     fullDescription: 'Learn essential Linux commands, shell scripting, process management, and system administration. Gain hands-on experience with file systems, permissions, and server configuration.',
@@ -47,7 +47,7 @@ module.exports = [
   //   icon: '🐍'
   // },
   {
-  name: 'bi-data-analytics',
+  name: 'bi',
   title: 'Business Intelligence and Data Analytics',
   level: 3,
   description: ' Weekly practice exams covering BI tools, analytics, and data visualization',
@@ -55,7 +55,7 @@ module.exports = [
   icon: '📊'
 },
 {
-  name: 'network-programming',
+  name: 'network',
   title: 'Network Programming',
   level: 3,
   description: 'Weekly practice exams covering sockets, protocols, and client-server development',
@@ -63,7 +63,7 @@ module.exports = [
   icon: '🌐'
 },
 {
-  name: 'mobile-graphical-interface',
+  name: 'mobile',
   title: 'Mobile Graphical Interface',
   level: 3,
   description: ' Weekly practice exams covering mobile UI/UX and application development',

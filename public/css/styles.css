@@ -125,6 +125,8 @@ body {
 }
 .nav-logo-accent { color: var(--accent); }
 
+
+
 /* Desktop nav links */
 .nav-links {
   display: flex;
@@ -156,6 +158,29 @@ body {
 /* --- Desktop Dropdown Menu Logic --- */
 .nav-dropdown {
     position: relative; /* Context for absolute positioning of child menu */
+    gap: 4px;
+}
+
+.nav-dropdown-toggle{
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+
+  border-radius: 999px;
+  transition: all 0.17s ease;
+  white-space: nowrap;
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--text-primary);
+  background: var(--tag-bg);
+}
+
+.nav-dropdown-toggle.active {
+  color: var(--accent);
+  background: var(--accent-light);
+  font-weight: 600;
 }
 
 .nav-dropdown-menu {
@@ -163,12 +188,13 @@ body {
     position: absolute;
     top: 100%;           /* Appear right under the trigger link */
     left: 0;
-    background-color: #fff;
+    background-color: var(--surface);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     z-index: 100;
     list-style: none;
     padding: 10px 0;
+    border-radius: var(--radius-sm);
 }
 
 /* Show the menu when the parent list item is hovered */
@@ -179,12 +205,19 @@ body {
 .nav-dropdown-item {
     display: block;
     padding: 8px 20px;
-    color: #333;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
     text-decoration: none;
+
 }
 
+.nav-dropdown-item::first-letter {
+  text-transform: uppercase;
+}
+
+
 .nav-dropdown-item:hover {
-    background-color: #f5f5f5;
+    background-color: var(--tag-bg);
 }
 
 /* --- Mobile Styling Tip --- */
@@ -193,7 +226,7 @@ body {
 }
 .mobile-section-title {
     font-weight: bold;
-    color: #666;
+    color: var(--text-muted);
     display: block;
     margin-bottom: 5px;
 }
@@ -202,7 +235,9 @@ body {
     padding-left: 15px; /* Indent sub-links for hierarchy */
 }
 
-
+.mobile-sub-links::first-letter {
+  text-transform: uppercase;
+}
 
 /* Hamburger */
 .hamburger {

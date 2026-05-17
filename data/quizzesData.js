@@ -111,7 +111,7 @@ module.exports = [
   // }
   // ,
   {
-    subjectName: 'bi-data-analytics',
+    subjectName: 'bi',
     title: 'Introduction to Data Analytics',
     description: 'Data Analytics fundamentals quiz',
     tagA: 'Basics',
@@ -119,7 +119,7 @@ module.exports = [
   }
   ,
   {
-    subjectName: 'network-programming',
+    subjectName: 'network',
     title: 'Networking Today',
     description: 'Explain the advances in modern technologies',
     tagA: 'Basics',
@@ -127,7 +127,7 @@ module.exports = [
   }
   ,
   {
-    subjectName: 'mobile-graphical-interface',
+    subjectName: 'mobile',
     title: 'Mobile GUI Programming — Dart & Flutter',
     description: 'Learning Dart and Flutter and Widget ',
     tagA: 'Basics',

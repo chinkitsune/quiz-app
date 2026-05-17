@@ -18,7 +18,7 @@ header.navbar
                         a.nav-dropdown-toggle(href='#')= `Level ${level}`
                         ul.nav-dropdown-menu
                             each sub in subjects
-                                li: a.nav-dropdown-item(href=`/subjects/${sub.name}`)= sub.title
+                                li: a.nav-dropdown-item(href=`/subjects/${sub.name}`)= sub.name
 
 
 
@@ -34,4 +34,4 @@ header.navbar
                         span.mobile-section-title= `Level ${level}`
                         ul.mobile-sub-links
                             each sub in subjects
-                                li: a.mobile-nav-link(href=`/subjects/${sub.name}`)= sub.title
+                                li: a.mobile-nav-link(href=`/subjects/${sub.name}`)= sub.name
