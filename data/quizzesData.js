@@ -30,6 +30,11 @@ module.exports = [
     description: "Java streams, NIO classes, sequential files, and file-based I/O.",
   },
     {
+    subjectName: 'java',
+    title: "OOP with Design Patterns",
+    description: "Object-oriented programming principles, design patterns, and their implementation in Java.",
+  },
+    {
     subjectName: 'database',
     title: "Oracle & PL/SQL",
     description:
@@ -103,5 +108,37 @@ module.exports = [
     description: 'Python fundamentals quiz',
     tagA: 'Basics',
     tagB: 'Syntax'
+  }
+  ,
+  {
+    subjectName: 'bi-data-analytics',
+    title: 'Introduction to Data Analytics',
+    description: 'Data Analytics fundamentals quiz',
+    tagA: 'Basics',
+    tagB: 'Concepts'
+  }
+  ,
+  {
+    subjectName: 'network-programming',
+    title: 'Networking Today',
+    description: 'Explain the advances in modern technologies',
+    tagA: 'Basics',
+    tagB: 'Concepts'
+  }
+  ,
+  {
+    subjectName: 'mobile-graphical-interface',
+    title: 'Mobile GUI Programming — Dart & Flutter',
+    description: 'Learning Dart and Flutter and Widget ',
+    tagA: 'Basics',
+    tagB: 'Concepts'
+  }
+  ,
+  {
+    subjectName: 'systems-analysis-design',
+    title: 'Intro to Project Management',
+    description: 'Learn the principles of systems analysis and design',
+    tagA: 'Basics',
+    tagB: 'Concepts'
   }
 ]; 
