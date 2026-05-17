@@ -28,20 +28,20 @@ module.exports = [
     fullDescription: 'Master database design principles, SQL querying, normalization, and performance optimization. Explore both relational (MySQL, PostgreSQL) and NoSQL (MongoDB) databases.',
     icon: '🗃️'
   },
-  {
-    name: 'javascript',
-    title: 'JavaScript',
-    description: 'Master JavaScript fundamentals',
-    fullDescription: 'Learn everything about JavaScript, from basics to advanced concepts.',
-    icon: '🚀'
-  },
-  {
-    name: 'python',
-    title: 'Python',
-    description: 'Learn Python programming',
-    fullDescription: 'Complete guide to Python programming language.',
-    icon: '🐍'
-  },
+  // {
+  //   name: 'javascript',
+  //   title: 'JavaScript',
+  //   description: 'Master JavaScript fundamentals',
+  //   fullDescription: 'Learn everything about JavaScript, from basics to advanced concepts.',
+  //   icon: '🚀'
+  // },
+  // {
+  //   name: 'python',
+  //   title: 'Python',
+  //   description: 'Learn Python programming',
+  //   fullDescription: 'Complete guide to Python programming language.',
+  //   icon: '🐍'
+  // },
   {
   name: 'bi-data-analytics',
   title: 'Business Intelligence and Data Analytics',

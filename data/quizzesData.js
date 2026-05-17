@@ -87,29 +87,29 @@ module.exports = [
     title: "User Authentication in Express.js",
     description:
       "authentication concepts, sessions vs tokens, JWT, password hashing, login and registration flows, and securing Express applications.",
-  },
-  {
-    subjectName: 'javascript',  // Reference by name, not _id yet
-    title: 'JavaScript Fundamentals',
-    description: 'Test your knowledge of JS basics',
-    tagA: 'Basics',
-    tagB: 'Functions'
-  },
-  {
-    subjectName: 'javascript',
-    title: 'JavaScript Advanced Concepts',
-    description: 'Deep dive into closures and async',
-    tagA: 'Advanced',
-    tagB: 'Async'
-  },
-  {
-    subjectName: 'python',
-    title: 'Python Basics',
-    description: 'Python fundamentals quiz',
-    tagA: 'Basics',
-    tagB: 'Syntax'
-  }
-  ,
+ },
+  // {
+  //   subjectName: 'javascript',  // Reference by name, not _id yet
+  //   title: 'JavaScript Fundamentals',
+  //   description: 'Test your knowledge of JS basics',
+  //   tagA: 'Basics',
+  //   tagB: 'Functions'
+  // },
+  // {
+  //   subjectName: 'javascript',
+  //   title: 'JavaScript Advanced Concepts',
+  //   description: 'Deep dive into closures and async',
+  //   tagA: 'Advanced',
+  //   tagB: 'Async'
+  // },
+  // {
+  //   subjectName: 'python',
+  //   title: 'Python Basics',
+  //   description: 'Python fundamentals quiz',
+  //   tagA: 'Basics',
+  //   tagB: 'Syntax'
+  // }
+  // ,
   {
     subjectName: 'bi-data-analytics',
     title: 'Introduction to Data Analytics',
