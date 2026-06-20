@@ -4,7 +4,7 @@ A full-stack web application designed to test student understanding of course ma
 
 ## 🌟 Features
 
-- **User Authentication & Management** - Secure user registration and login system
+
 - **Subject Management** - Organize quizzes by subject or topic
 - **Interactive Quizzes** - Take multiple-choice or short-answer quizzes
 - **Real-time Quiz Scoring** - Instant feedback on quiz completion
