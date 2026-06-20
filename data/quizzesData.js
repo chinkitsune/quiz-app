@@ -116,6 +116,35 @@ module.exports = [
     description: 'Data Analytics fundamentals quiz',
     tagA: 'Basics',
     tagB: 'Concepts'
+  },
+
+  {
+    subjectName: 'bi',
+    title: 'Data Understanding & kNN',
+    description: 'Data preprocessing, normalization, and kNN classification quiz',
+    tagA: 'Data Preparation',
+    tagB: 'kNN'
+  },
+  {
+    subjectName: 'bi',
+    title: 'Classification: Decision Trees',
+    description: 'Decision tree construction, entropy, and pruning quiz',
+    tagA: 'Decision Trees',
+    tagB: 'Classification'
+  },
+  {
+    subjectName: 'bi',
+    title: 'Outlier Detection',
+    description: 'Statistical and machine learning outlier detection quiz',
+    tagA: 'Outlier Detection',
+    tagB: 'Anomaly Detection'
+  },
+  {
+    subjectName: 'bi',
+    title: 'Clustering & K-Means',
+    description: 'Unsupervised clustering and K-Means algorithm quiz',
+    tagA: 'Clustering',
+    tagB: 'K-Means'
   }
   ,
   {
