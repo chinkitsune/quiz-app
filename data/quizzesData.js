@@ -34,6 +34,39 @@ module.exports = [
     title: "OOP with Design Patterns",
     description: "Object-oriented programming principles, design patterns, and their implementation in Java.",
   },
+
+  {
+    subjectName: 'java',
+    title: 'JDBC',
+    description:
+      'Java Database Connectivity (JDBC), database connections, executing SQL statements, prepared statements, result sets, transaction management, and CRUD operations.',
+  },
+  {
+    subjectName: 'java',
+    title: 'Design Patterns, DAO and Singleton',
+    description:
+      'Software design patterns, separation of concerns, Data Access Object (DAO) architecture, Singleton pattern, object creation control, and maintainable application design.',
+  },
+  {
+    subjectName: 'java',
+    title: 'Factory Pattern',
+    description:
+      'Factory design pattern, object creation abstraction, factory methods, loose coupling, polymorphism, and flexible object instantiation techniques.',
+  },
+  {
+    subjectName: 'java',
+    title: 'Builder Pattern',
+    description:
+      'Builder design pattern, step-by-step object construction, fluent interfaces, immutable objects, complex object creation, and code readability improvements.',
+  },
+  {
+    subjectName: 'java',
+    title: 'Strategy Pattern',
+    description:
+      'Strategy design pattern, interchangeable algorithms, encapsulating behaviors, runtime strategy selection, composition over inheritance, and flexible application design.',
+  },
+
+
     {
     subjectName: 'database',
     title: "Oracle & PL/SQL",
@@ -153,8 +186,58 @@ module.exports = [
     description: 'Explain the advances in modern technologies',
     tagA: 'Basics',
     tagB: 'Concepts'
-  }
-  ,
+  },
+
+ {
+    subjectName: "network",
+    title: "Protocols and Models",
+    description: "Explain how rules and standards allow devices to communicate, and compare the OSI and TCP/IP reference models used to describe network functions.",
+    tagA: "Protocols",
+    tagB: "OSI Model"
+  },
+  {
+    subjectName: "network",
+    title: "Physical Layer",
+    description: "Describe how physical layer protocols, network media, and industry standards enable the transmission of bits across copper, fiber, and wireless networks.",
+    tagA: "Hardware",
+    tagB: "Cabling"
+  },
+  {
+    subjectName: "network",
+    title: "Data Link Layer",
+    description: "Explain how media access control in the data link layer supports communication across different LAN and WAN topologies.",
+    tagA: "Topologies",
+    tagB: "Media Access Control"
+  },
+  {
+    subjectName: "network",
+    title: "Ethernet Switching",
+    description: "Explain how switches use MAC addresses, learning, and frame forwarding methods to support communication on an Ethernet network.",
+    tagA: "Switching",
+    tagB: "MAC Address"
+  },
+  {
+    subjectName: "network",
+    title: "Address Resolution",
+    description: "Explain how the Address Resolution Protocol (ARP) maps IP addresses to MAC addresses, enabling devices to communicate on a local network.",
+    tagA: "1",
+    tagB: "ARP"
+  },
+
+  {
+    subjectName: "network",
+    title: "Network Layer",
+    description: "Explain how the network layer uses IPv4 and IPv6 to provide addressing, encapsulation, and routing services across networks.",
+    tagA: "IP Addressing",
+    tagB: "Routing"
+  },
+  {
+    subjectName: "network",
+    title: "IPv4 Addressing & Subnetting",
+    description: "Apply IPv4 subnetting concepts to divide networks efficiently, calculate subnet masks, determine network and broadcast addresses, and identify valid host ranges.",
+    tagA: "Subnet Masks",
+    tagB: "Address Calculation"
+  },
   {
     subjectName: 'mobile',
     title: 'Mobile GUI Programming — Dart & Flutter',
