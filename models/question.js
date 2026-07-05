@@ -7,11 +7,11 @@ const questionSchema = new mongoose.Schema({
     ref: 'quiz',
     required: true
   },
-  subject: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'subject',
-    required: true
-  },
+  // subject: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'subject',
+  //   required: true
+  // },
   question: {
     type: String,
     required: true
