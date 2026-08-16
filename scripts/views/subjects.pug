@@ -1,0 +1,32 @@
+//- views/subjects.pug
+extends layout 
+
+block styles
+  link(rel='stylesheet' href='/css/subjects.css')
+
+
+block content
+  section.subject-hero
+    .subject-hero-inner
+      .subject-icon= subject.icon
+      h1.subject-title= subject.title
+      p.subject-lead= subject.fullDescription
+  
+  section.quiz-list
+    h2 Available Quizzes
+      .quiz-list-container
+        .quiz-list-card
+          each quiz in quizzes
+            a.quiz-list-item(href=`/quizzes/${quiz.slug}`)
+              .quiz-list-main
+                h3.quiz-list-title= quiz.title
+                p.quiz-list-description= quiz.description
+              .quiz-list-meta
+                if quiz.tagA
+                  .quiz-tag= quiz.tagA
+                if quiz.tagB
+                  .quiz-tag= quiz.tagB
+                .quiz-difficulty(class=`difficulty-${quiz.difficulty}`)= quiz.difficulty
+              .quiz-arrow →
+
+

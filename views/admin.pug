@@ -1,0 +1,107 @@
+//- views/admin.pug
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/css/admin.css')
+
+block scripts
+  script(src='/js/admin.js' defer)
+
+block content
+  section.admin-page
+    h1.admin-title Admin
+
+    if success
+      .admin-alert.admin-alert--success= success
+    if error
+      .admin-alert.admin-alert--error= error
+
+    .admin-grid
+      //- ── Step 1: create the quiz ──────────────────────────────
+      .admin-card
+        h2 1. Create a quiz
+        form(method='POST' action='/admin/quizzes')
+          label(for='subjectName') Subject
+          select#subjectName(name='subjectName' required)
+            option(value='' disabled selected) Select a subject…
+            each subject in subjects
+              option(value=subject.name)= subject.title
+
+          label(for='title') Quiz title
+          input#title(type='text' name='title' required placeholder='e.g. Java Generics')
+
+          label(for='description') Description
+          textarea#description(name='description' rows=3 required placeholder='What this quiz covers…')
+
+          .admin-row
+            div
+              label(for='tagA') Tag A (optional)
+              input#tagA(type='text' name='tagA')
+            div
+              label(for='tagB') Tag B (optional)
+              input#tagB(type='text' name='tagB')
+
+          button.admin-btn(type='submit') Create quiz
+
+      //- ── Step 2: add questions to a quiz ──────────────────────
+      .admin-card
+        h2 2. Add questions to a quiz
+        p.admin-hint Ask AI for the questions using the prompt below, then paste its JSON array here.
+        form#addQuestionsForm(method='POST' action='/admin/questions')
+          label(for='quizSearch') Quiz
+          input#quizSearch(type='text' list='quizOptions' placeholder='Start typing a quiz title…' autocomplete='off' required)
+          datalist#quizOptions
+            each quiz in quizzes
+              option(data-id=quiz._id value=quiz.title)
+          input#quizId(type='hidden' name='quizId')
+          p#quizSearchHint.admin-field-hint
+
+          label(for='questionsJson') Questions JSON
+          textarea#questionsJson(name='questionsJson' rows=14 required placeholder='[\n  {\n    "question": "...",\n    "options": ["...", "...", "...", "..."],\n    "correctOption": 0,\n    "explanation": "..."\n  }\n]')
+
+          button.admin-btn(type='submit') Add questions
+
+    .admin-card.admin-card--wide
+      h2 AI prompt template
+      p.admin-hint Copy this into your AI chat (swap in your topic), then paste the JSON array it returns into the box above. No need to include a quiz title/name field — picking the quiz above already links the questions to it.
+      pre.admin-code
+        code.
+          Generate 10 multiple-choice quiz questions about "&lt;YOUR QUIZ TOPIC&gt;".
+          Return ONLY a raw JSON array, no markdown fences and no extra text,
+          where every item has exactly this shape:
+
+          [
+            {
+              "question": "string, may include simple HTML like &lt;code&gt; or &lt;strong&gt;",
+              "options": ["string", "string", "string", "string"],
+              "correctOption": 0,
+              "explanation": "string explaining why that option is correct"
+            }
+          ]
+
+          correctOption is the zero-based index into "options".
+
+    //- ── Manage existing quizzes ──────────────────────────────
+    .admin-card.admin-card--wide
+      h2 Manage quizzes
+      input#quizManageSearch.admin-manage-search(type='text' placeholder='Search by title or subject…' autocomplete='off')
+
+      table#quizManageTable.admin-table
+        thead
+          tr
+            th Title
+            th Subject
+            th Slug
+            th Questions
+            th(colspan=2) Actions
+        tbody
+          each quiz in quizzes
+            tr(data-search=(quiz.title + ' ' + (quiz.subject ? quiz.subject.title : '')).toLowerCase())
+              td= quiz.title
+              td= quiz.subject ? quiz.subject.title : '—'
+              td.admin-slug= quiz.slug
+              td= quiz.questionCount
+              td: a.admin-link(href=`/admin/quizzes/${quiz._id}/edit`) Edit
+              td
+                form(method='POST' action=`/admin/quizzes/${quiz._id}/delete` onsubmit=`return confirm('Delete "${quiz.title}" and all its questions? This cannot be undone.')`)
+                  button.admin-link.admin-link--danger(type='submit') Delete
