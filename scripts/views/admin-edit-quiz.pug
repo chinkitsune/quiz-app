@@ -1,0 +1,39 @@
+//- views/admin-edit-quiz.pug
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/css/admin.css')
+
+block content
+  section.admin-page
+    a.admin-link(href='/admin') ← Back to admin
+
+    h1.admin-title Edit quiz
+
+    if error
+      .admin-alert.admin-alert--error= error
+
+    .admin-card(style='max-width: 560px;')
+      form(method='POST' action=`/admin/quizzes/${quiz._id}`)
+        label(for='subjectName') Subject
+        select#subjectName(name='subjectName' required)
+          each subject in subjects
+            option(value=subject.name selected=(quiz.subject && quiz.subject.name === subject.name))= subject.title
+
+        label(for='title') Quiz title
+        input#title(type='text' name='title' required value=quiz.title)
+
+        label(for='description') Description
+        textarea#description(name='description' rows=3 required)= quiz.description
+
+        .admin-row
+          div
+            label(for='tagA') Tag A (optional)
+            input#tagA(type='text' name='tagA' value=quiz.tagA)
+          div
+            label(for='tagB') Tag B (optional)
+            input#tagB(type='text' name='tagB' value=quiz.tagB)
+
+        p.admin-field-hint Current slug: #{quiz.slug} — changing the title will regenerate it.
+
+        button.admin-btn(type='submit') Save changes

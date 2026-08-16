@@ -1,0 +1,48 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/css/quiz.css')
+
+block scripts
+  script(type='module' src="/js/quiz-engine.js" defer)
+
+block content
+  // Embed quiz data as a script, NOT mixed with HTML
+  script(type='application/json' id='quiz-data')
+    != quizDataJson
+
+  // Pure HTML structure — NO JavaScript logic here
+  div#quiz-container
+    header.sticky-header
+      #filter-bar.filter-buttons
+        // Buttons will be built by JavaScript
+        
+      .header-inner
+        h1.header-title= quiz.title
+        .progress-ring-wrapper
+          .progress-bar-track
+            .progress-bar-fill#ring-fill
+          #progress-text
+      
+      
+    
+    main#questions-grid.questions-grid
+      // Questions will be rendered by JavaScript
+
+    #summary-screen.summary-section
+      .summary-inner
+        h2 Quiz Complete! 🎉
+        div#summary-emoji.emoji-display
+        div#grade-badge.grade-badge
+        div#summary-sub.summary-message
+        .stats-row
+          .stat-block
+            .stat-label Total Questions
+            .stat-value#stat-total
+          .stat-block
+            .stat-label Correct
+            .stat-value#stat-correct
+          .stat-block
+            .stat-label Wrong
+            .stat-value#stat-wrong
+        button.btn.btn-primary(onclick='window.resetQuiz()') Try Again

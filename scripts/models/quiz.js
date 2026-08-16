@@ -1,0 +1,42 @@
+// models/quiz.js
+const mongoose = require('mongoose');
+
+
+const quizSchema = new mongoose.Schema({
+  subject: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'subject',
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  tagA: {
+    type: String
+  },
+  tagB: {
+    type: String
+  },
+  questionCount: {
+    type: Number,
+    default: 0
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model('quiz', quizSchema);

@@ -1,0 +1,37 @@
+//- views/includes/header.pug
+header.navbar
+    nav.nav-inner
+        //- Logo
+        a.nav-logo(href='/')
+            span.nav-logo-icon ⬡
+            span.nav-logo-text Quiz
+            span.nav-logo-accent Lab
+
+        //- Desktop nav links
+        ul.nav-links
+            li: a.nav-link(href='/') Home
+            
+            //- Dynamically build dropdowns for Level 2, Level 3, etc.
+            if navLevels
+                each subjects, level in navLevels
+                    li.nav-dropdown
+                        a.nav-dropdown-toggle(href='#')= `Level ${level}`
+                        ul.nav-dropdown-menu
+                            each sub in subjects
+                                li: a.nav-dropdown-item(href=`/subjects/${sub.name}`)= sub.name
+
+
+
+    //- Mobile drawer
+    .mobile-drawer(id='mobile-drawer' aria-hidden='true')
+        ul.mobile-nav-links
+            li: a.mobile-nav-link(href='/') Home
+            
+            //- Mobile Accordion/Sections
+            if navLevels
+                each subjects, level in navLevels
+                    li.mobile-nav-section
+                        span.mobile-section-title= `Level ${level}`
+                        ul.mobile-sub-links
+                            each sub in subjects
+                                li: a.mobile-nav-link(href=`/subjects/${sub.name}`)= sub.name
